@@ -71,7 +71,7 @@ body.dark-theme {
   background-color: $dark-gray;
   color: #f8f9fa;
   #particles-js {
-    background-color:  #293241;
+    background-color:  $dark-gray;
   }
   .navbar {
     background-color: $dark-gray;
@@ -99,6 +99,9 @@ body.dark-theme {
   }
   .label {
     background-color: #344177;
+  }
+  .modal-content{
+    background-color: $dark-gray;
   }
 }
 
@@ -134,6 +137,7 @@ canvas {
     border: 2px solid $red;
     text-transform: uppercase;
     border-radius: 2px;
+    padding: 1rem 0.8rem;
   }
   .btn-resume:hover {
     background: $red;
@@ -145,6 +149,7 @@ canvas {
     border: 2px solid $yellow;
     text-transform: uppercase;
     border-radius: 2px;
+    padding: 1rem 0.8rem;
   }
   .btn-projects:hover {
     background: $yellow;

@@ -47,7 +47,7 @@ body.dark-theme {
   color: #f8f9fa;
 }
 body.dark-theme #particles-js {
-  background-color: #293241;
+  background-color: #212529;
 }
 body.dark-theme .navbar {
   background-color: #212529;
@@ -69,6 +69,9 @@ body.dark-theme #portfolio-section .nav-tabs a:after {
 }
 body.dark-theme .label {
   background-color: #344177;
+}
+body.dark-theme .modal-content {
+  background-color: #212529;
 }
 
 body {
@@ -106,6 +109,7 @@ canvas {
   border: 2px solid #d1495b;
   text-transform: uppercase;
   border-radius: 2px;
+  padding: 1rem 0.8rem;
 }
 .home-section .btn-resume:hover {
   background: #d1495b;
@@ -117,6 +121,7 @@ canvas {
   border: 2px solid #f5cb5c;
   text-transform: uppercase;
   border-radius: 2px;
+  padding: 1rem 0.8rem;
 }
 .home-section .btn-projects:hover {
   background: #f5cb5c;
