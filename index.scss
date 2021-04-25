@@ -29,6 +29,24 @@ body.light-theme {
   #particles-js {
     background-color: $particles-bg-light;
   }
+
+  
+  .main-section{
+    .label {
+      background-color: $dark-gray;
+    }
+
+    .label .ball {
+      background-color: white;
+    }
+
+    .fa-moon {
+      color: $yellow;
+    }
+    .fa-sun {
+      color: $yellow;
+    }
+  }
   .navbar {
     background-color: #f8f9fa;
     a {
@@ -55,9 +73,6 @@ body.light-theme {
     }
   }
 
-  .label {
-    background-color: #0077B6;
-  }
 
   #contact-section {
     background-color: $particles-bg-light;
@@ -71,10 +86,26 @@ body.dark-theme {
   background-color: $dark-gray;
   color: #f8f9fa;
   #particles-js {
-    background-color:  $dark-gray;
+    background-color: $dark-gray;
+  }
+  .main-section{
+    .label {
+      background-color: white;
+    }
+
+    .label .ball {
+      background-color: $dark-gray;
+    }
+
+    .fa-moon {
+      color: $smalt-blue;
+    }
+    .fa-sun {
+      color: $dark-gray;
+    }
   }
   .navbar {
-    background-color: $dark-gray;
+    background-color: rgba($dark-gray, 0.95);
     a {
       color: $whitey !important;
       &:before,
@@ -82,6 +113,8 @@ body.dark-theme {
         background-color: $red;
       }
     }
+
+
   }
 
   .animated-underline {
@@ -97,10 +130,7 @@ body.dark-theme {
       }
     }
   }
-  .label {
-    background-color: #344177;
-  }
-  .modal-content{
+  .modal-content {
     background-color: $dark-gray;
   }
 }
@@ -116,7 +146,7 @@ body {
   }
   p {
     font-family: "Open-Sans", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.7;
   }
@@ -155,48 +185,6 @@ canvas {
     background: $yellow;
     border: 2px solid $yellow;
   }
-  .checkbox {
-    opacity: 0;
-    position: absolute;
-  }
-
-  .label {
-    background-color: $gunmetal;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    height: 26px;
-    width: 50px;
-    transform: scale(1.5);
-  }
-
-  .label .ball {
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    width: 22px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-  }
-
-  .checkbox:checked + .label .ball {
-    transform: translateX(24px);
-  }
-
-  .fa-moon {
-    color: #f1c40f;
-  }
-
-  .fa-sun {
-    color: #f39c12;
-  }
 }
 #particles-js {
   position: absolute;
@@ -234,28 +222,123 @@ canvas {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.toggle-switch {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  transform: translate(50%, -50%);
-}
+// .toggle-switch {
+//   position: absolute;
+//   top: 5%;
+//   right: 5%;
+//   transform: translate(50%, -50%);
+// }
 .home-text h1 {
   font-size: 2.25em;
   font-weight: 700;
   letter-spacing: 0.2px;
 }
 
+.main-section {
+  position: relative !important;
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .label {
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.1);
+  }
+
+  .label .ball {
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+  }
+
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+
+
+  .navbar {
+    background-color: transparent;
+    transition: background 0.2s linear;
+    ul {
+      margin: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 20px;
+      }
+    }
+    a {
+      font-size: 1rem;
+      color: $brown;
+      position: relative;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 6px;
+      font-weight: 500;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $red;
+      }
+      &:before {
+        opacity: 0;
+        transform: translateY(-$distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+      }
+      &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        &:before,
+        &:after {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        &:before {
+          transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+      }
+    }
+  }
+}
+
 #about-section {
   padding: 7rem 0 7rem 0 !important;
-  .skills{
-    .skill-card{
-      img:hover{
-        
-        -ms-transform: scale(1.1,1.1); /* IE 9 */
-        transform: scale(1.1,1.1);
+  .skills {
+    .skill-card {
+      img:hover {
+        -ms-transform: scale(1.1, 1.1); /* IE 9 */
+        transform: scale(1.1, 1.1);
         transition: all 0.7s;
-
       }
     }
   }
@@ -756,68 +839,6 @@ canvas {
   }
 }
 
-.main-section {
-  position: relative !important;
-  .navbar {
-    background-color: transparent;
-    transition: background 0.2s linear;
-    ul {
-      margin: 0;
-      text-align: center;
-
-      li {
-        display: inline-block;
-        margin: 0 20px;
-      }
-    }
-    a {
-      font-size: 1rem;
-      color: $brown;
-      position: relative;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding-bottom: 6px;
-      font-weight: 500;
-
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: $red;
-      }
-      &:before {
-        opacity: 0;
-        transform: translateY(-$distance);
-        transition: transform 0s $easeOutBack, opacity 0s;
-      }
-      &:after {
-        opacity: 0;
-        transform: translateY($distance/2);
-        transition: transform $duration $easeOutBack, opacity $duration;
-      }
-      &:hover,
-      &:focus,
-      &.active {
-        &:before,
-        &:after {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        &:before {
-          transition: transform $duration $easeOutBack, opacity $duration;
-        }
-        &:after {
-          transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
-        }
-      }
-    }
-  }
-}
-
 #footer {
   border-top: 1px solid $secondary-light;
   background: $eerie-black;
@@ -834,11 +855,10 @@ canvas {
     a:hover {
       i {
         transform: -moz;
-        color: $yellow;  
-        -ms-transform: scale(1.2,1.2); /* IE 9 */
-        transform: scale(1.2,1.2);
+        color: $yellow;
+        -ms-transform: scale(1.2, 1.2); /* IE 9 */
+        transform: scale(1.2, 1.2);
         transition: all 0.5s;
-
       }
     }
   }
@@ -848,7 +868,7 @@ canvas {
     font-family: "Roboto Mono";
     margin: 0;
     font-size: 0.9rem;
-    span{
+    span {
       font-size: 1rem;
     }
   }
@@ -889,28 +909,50 @@ canvas {
   }
 }
 
-
-.modal{
-  .modal-body{
+.modal {
+  .modal-body {
     padding: 0 !important;
-    img{
+    img {
       border-bottom: 3px solid $smalt-blue;
     }
-    .project-name{
+    .project-name {
       font-weight: bold;
       padding-top: 1rem;
     }
-    .project-langs{
+    .project-langs {
       padding-bottom: 0.5rem;
       border-bottom: 1px solid rgba(gray, 0.2);
     }
   }
-  .close{
+  .close {
     transition: all 0.3s;
   }
-  .close:hover, .close:focus{
+  .close:hover,
+  .close:focus {
     color: #d90429 !important;
-    border: none !important;    
+    border: none !important;
     outline: 0;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container {
+    max-width: 900px !important;
   }
 }
