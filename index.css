@@ -94,17 +94,10 @@ body.dark-theme .modal-content {
 
 body {
   margin: 0;
+  font-family: "Open-Sans", sans-serif;
   transition: background 0.2s linear;
 }
-body h1,
-body h2,
-body h3,
-body h4,
-body h5 {
-  font-family: "Roboto Slab", serif;
-}
 body p {
-  font-family: "Open-Sans", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.7;
@@ -120,6 +113,24 @@ canvas {
   margin: 0;
   width: 100vh;
   height: 100vh;
+}
+.home-section .social-icons {
+  margin: 2rem 0 1rem 0;
+  font-size: 2rem;
+}
+.home-section .social-icons a {
+  text-decoration: none;
+}
+.home-section .social-icons a i {
+  color: white;
+}
+.home-section .social-icons a:hover i {
+  transform: -moz;
+  color: #f5cb5c;
+  -ms-transform: scale(1.2, 1.2);
+  /* IE 9 */
+  transform: scale(1.2, 1.2);
+  transition: all 0.5s;
 }
 .home-section .btn-resume {
   background: transparent;
@@ -293,9 +304,9 @@ canvas {
 }
 #portfolio-section .nav-tabs a {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   font-weight: 500;
   display: inline-block;
   padding: 15px 20px;
@@ -457,7 +468,7 @@ canvas {
   }
 }
 #portfolio-section #hamds:before {
-  background-image: url(images/1.jpg);
+  background-image: url(images/hamds/5.png);
 }
 #portfolio-section #chatlara:before {
   background-image: url(images/chatvuelara/cover.png);
@@ -692,24 +703,6 @@ canvas {
   border-top: 1px solid #4e958b;
   background: #242423;
   text-align: center;
-}
-#footer .social-icons {
-  margin: 2rem 0 1rem 0;
-  font-size: 2rem;
-}
-#footer .social-icons a {
-  text-decoration: none;
-}
-#footer .social-icons a i {
-  color: white;
-}
-#footer .social-icons a:hover i {
-  transform: -moz;
-  color: #f5cb5c;
-  -ms-transform: scale(1.2, 1.2);
-  /* IE 9 */
-  transform: scale(1.2, 1.2);
-  transition: all 0.5s;
 }
 #footer p {
   color: white;

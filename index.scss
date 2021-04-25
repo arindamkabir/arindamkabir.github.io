@@ -30,8 +30,7 @@ body.light-theme {
     background-color: $particles-bg-light;
   }
 
-  
-  .main-section{
+  .main-section {
     .label {
       background-color: $dark-gray;
     }
@@ -73,7 +72,6 @@ body.light-theme {
     }
   }
 
-
   #contact-section {
     background-color: $particles-bg-light;
     p {
@@ -88,7 +86,7 @@ body.dark-theme {
   #particles-js {
     background-color: $dark-gray;
   }
-  .main-section{
+  .main-section {
     .label {
       background-color: white;
     }
@@ -113,8 +111,6 @@ body.dark-theme {
         background-color: $red;
       }
     }
-
-
   }
 
   .animated-underline {
@@ -137,15 +133,9 @@ body.dark-theme {
 
 body {
   margin: 0;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Roboto Slab", serif;
-  }
+
+  font-family: "Open-Sans", sans-serif;
   p {
-    font-family: "Open-Sans", sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.7;
@@ -160,7 +150,25 @@ canvas {
   margin: 0;
   width: 100vh;
   height: 100vh;
-
+  .social-icons {
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    a {
+      text-decoration: none;
+      i {
+        color: white;
+      }
+    }
+    a:hover {
+      i {
+        transform: -moz;
+        color: $yellow;
+        -ms-transform: scale(1.2, 1.2); /* IE 9 */
+        transform: scale(1.2, 1.2);
+        transition: all 0.5s;
+      }
+    }
+  }
   .btn-resume {
     background: transparent;
     color: white;
@@ -270,7 +278,6 @@ canvas {
     transform: translateX(24px);
   }
 
-
   .navbar {
     background-color: transparent;
     transition: background 0.2s linear;
@@ -352,9 +359,9 @@ canvas {
     justify-content: center;
     a {
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 0.8rem;
       text-decoration: none;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       font-weight: 500;
       display: inline-block;
       padding: 15px 20px;
@@ -555,7 +562,7 @@ canvas {
   }
 
   #hamds:before {
-    background-image: url(images/1.jpg);
+    background-image: url(images/hamds/5.png);
   }
 
   #chatlara:before {
@@ -843,25 +850,7 @@ canvas {
   border-top: 1px solid $secondary-light;
   background: $eerie-black;
   text-align: center;
-  .social-icons {
-    margin: 2rem 0 1rem 0;
-    font-size: 2rem;
-    a {
-      text-decoration: none;
-      i {
-        color: white;
-      }
-    }
-    a:hover {
-      i {
-        transform: -moz;
-        color: $yellow;
-        -ms-transform: scale(1.2, 1.2); /* IE 9 */
-        transform: scale(1.2, 1.2);
-        transition: all 0.5s;
-      }
-    }
-  }
+
   p {
     color: white;
     padding: 1rem 0 2rem 0;
